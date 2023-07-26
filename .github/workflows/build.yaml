@@ -33,5 +33,5 @@ jobs:
           PROJECT_DIR: ${{ github.workspace }}
           PLATFORM: linux/amd64,linux/arm/v7,linux/arm64
         run: |
-          sudo apt update && sudo apt install curl &&
+          sudo apt update && sudo apt install curl jq &&
           ./image-build.sh
