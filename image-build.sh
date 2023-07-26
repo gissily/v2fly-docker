@@ -11,6 +11,6 @@ docker buildx build \
     --platform linux/amd64 \
     --build-arg TAG=${LATEST} \
     --push \
-    -t ${CI_REGISTRY}/gissily/v2fly-docker:${LATEST} \
-    -t ${CI_REGISTRY}/gissily/v2fly-docker:latest \
+    -t ${CI_REGISTRY}/gissily/v2fly-core:${LATEST} \
+    -t ${CI_REGISTRY}/gissily/v2fly-core:latest \
     -f ${PROJECT_DIR}/Dockerfile . --no-cache
