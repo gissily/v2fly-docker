@@ -34,6 +34,7 @@ RUN set -eux; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
         ca-certificates \
+        iptables \
     ; \
     apt-get clean ; \
     apt-get -y autoclean ; \
