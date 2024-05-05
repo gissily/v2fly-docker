@@ -1,4 +1,4 @@
-FROM --platform=${TARGETPLATFORM} ubuntu:jammy AS builder
+FROM --platform=${TARGETPLATFORM} ubuntu:noble AS builder
 
 ARG TARGETPLATFORM
 ARG TAG
@@ -27,7 +27,7 @@ RUN git clone https://github.com/v2fly/docker.git ;\
     /build/docker/v2ray.sh "${TARGETPLATFORM}" "${TAG}"
 
 
-FROM --platform=${TARGETPLATFORM} ubuntu:jammy
+FROM --platform=${TARGETPLATFORM} ubuntu:noble
 
 RUN set -eux; \
     DEBIAN_FRONTEND=noninteractive ; \
