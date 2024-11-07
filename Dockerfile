@@ -8,9 +8,9 @@ RUN set -eux; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
         ca-certificates \
+        git \
         unzip \
         wget \
-        git \
     ; \
     apt-get clean ; \
     apt-get -y autoclean ; \
@@ -34,6 +34,7 @@ RUN set -eux; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
         ca-certificates \
+        iproute2 \
         iptables \
     ; \
     apt-get clean ; \
