@@ -17,7 +17,7 @@ jobs:
       - name: Set Env
         run: echo "TIMESTAMP=$(date +%y.%m.%d.%H.%M)" >> $GITHUB_ENV
       - name: Setup QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
