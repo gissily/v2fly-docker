@@ -28,7 +28,7 @@ jobs:
           registry: ghcr.io
           username: ${{ secrets.CR_NAME }}
           password: ${{ secrets.CR_PAT }}
-      - name: Env
+      - name: Docker build & push
         env:
           TAG_VERSION: ${{ github.run_number }}
           CI_REGISTRY: ghcr.io
@@ -36,8 +36,4 @@ jobs:
           PLATFORM: linux/amd64, linux/arm64
         run: |
           sudo apt update && sudo apt install curl jq &&
-          echo "LATEST=$(curl -s https://api.github.com/repos/v2fly/v2ray-core/releases/latest | jq | grep tag_name | cut -d '"' -f 4)" >> $GITHUB_ENV
-          
-      - name: Docker build & push
-        run: |
-          docker buildx bake -f docker-bake.hcl --pull --push --no-cache
+          ./image-build.sh
