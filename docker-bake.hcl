@@ -27,7 +27,7 @@ target "v2fly-core" {
 }
 
 target "v2fly-build-tools" {
-  dockerfile = "Dockerfile-tools"\
+  dockerfile = "Dockerfile-tools"
   args = {
     TAG = "${LATEST}",
   }
