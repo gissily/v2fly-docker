@@ -36,4 +36,4 @@ jobs:
           PLATFORM: linux/amd64, linux/arm64
         run: |
           sudo apt update && sudo apt install curl jq &&
-          docker bake --file docker-bake.hcl --pull --push --no-cache
+          docker bake -f docker-bake.hcl --pull --push --no-cache
