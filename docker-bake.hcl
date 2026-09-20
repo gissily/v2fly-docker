@@ -1,5 +1,5 @@
 group "default" {
-  targets = ["v2fly-core"]
+  targets = ["v2fly-core", "v2fly-build-tools"]
 }
 
 variable "PROJECT_DIR" {
