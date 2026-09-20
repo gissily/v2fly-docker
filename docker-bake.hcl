@@ -15,7 +15,6 @@ variable "LATEST" {
 }
 
 target "v2fly-core" {
-  context = "${PROJECT_DIR}"
   dockerfile = "Dockerfile"
   args = {
     TAG = "${LATEST}",
@@ -28,7 +27,6 @@ target "v2fly-core" {
 }
 
 target "v2fly-build-tools" {
-  context = "${PROJECT_DIR}"
   dockerfile = "Dockerfile-tools"
   args = {
     TAG = "${LATEST}",
@@ -36,5 +34,5 @@ target "v2fly-build-tools" {
   platforms = ["linux/amd64", "linux/arm64"]
   tags = [
     "${CI_REGISTRY}/gissily/v2fly-core:build"
-  ]
+    ]
 }
